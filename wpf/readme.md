@@ -1,3 +1,5 @@
+## Transparent window with the possibility of stretching
+```xaml
 <Window x:Class="WpfApp2.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -18,3 +20,4 @@
 
     </Grid>
 </Window>
+```
