@@ -1,3 +1,5 @@
+# WPF
+
 ## Transparent window with the possibility of stretching
 ```xaml
 <Window x:Class="WpfApp2.MainWindow"
