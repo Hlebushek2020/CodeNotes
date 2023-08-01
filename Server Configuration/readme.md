@@ -4,7 +4,7 @@ Unit Location:
 /lib/systemd/system/yuko-bot.service
 ```
 Unit:
-```bash                                                                                                                          
+```ini                                                                                                                          
 [Unit]
 Description=Downloading attachments from Discord channels
 After=network.target mariadb.service
@@ -28,7 +28,7 @@ Unit Location:
 /lib/systemd/system/volt-bot.service
 ```
 Unit:
-```bash
+```ini
 [Unit]
 Description=Bot for Misty Owl & Dr.Sly discord server
 #After=network.target mariadb.service
@@ -52,7 +52,7 @@ Unit Location:
 /lib/systemd/system/home-ubuntu-Share.mount
 ```
 Unit:
-```bash
+```ini
 [Install]
 WantedBy=multi-user.target
 
@@ -72,7 +72,7 @@ Unit Location:
 /lib/systemd/system/my-website.service
 ```
 Unit:
-```bash
+```ini
 [Unit]
 Description=My Website (Apache Tomcat Web Application Container)
 After=network.target postgresql.service
