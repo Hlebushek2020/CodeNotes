@@ -42,6 +42,17 @@ Configuration:
   }
 }
 ```
+Exclude regex:
+gitignore|regex
+-|-
+`/.idea`     | `^\\.idea\\\\`
+`/.vs`       | `^\\.vs\\\\`
+`/packages`  | `^packages\\\\`
+`**/Output`  | `\\\\Output\\\\`
+`**/bin`     | `\\\\bin\\\\`
+`**/obj`     | `\\\\obj\\\\`
+`*Thumbs.db` | `Thumbs\\.db$`
+`*.user`     | `\\.user$`
 ## Yuko Bot
 Unit Location:
 ```
