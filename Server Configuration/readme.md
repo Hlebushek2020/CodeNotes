@@ -1,3 +1,47 @@
+## Sync
+### Sync Server
+Unit Location:
+```
+/lib/systemd/system/sync-server.service
+```
+Unit:
+```ini                  
+[Unit]
+Description=Sync Server
+After=network.target
+Requires=network.target
+
+[Service]
+ExecStart=/opt/dotnet-runtime-7/dotnet /opt/sync-server/SyncServer.dll
+Type=idle
+Restart=on-failure
+KillMode=process
+SyslogIdentifier=sync-server
+User=ubuntu
+Group=ubuntu
+
+[Install]
+WantedBy=multi-user.target
+```
+### Sync Service
+Configuration:
+```json
+{
+  "ServerIp": null,
+  "ServerPort": 0,
+  "ListenForDirectories": {
+    "key": {
+      "FolderPath": "folder_path",
+      "ExcludeDirectories": [
+        {
+          "Pattern": "[example]",
+          "Options": 8
+        }
+      ]
+    }
+  }
+}
+```
 ## Yuko Bot
 Unit Location:
 ```
