@@ -29,3 +29,8 @@ apt-get install nextcloud nextcloud-apache2
 apt-get install php8.2-pdo_mysql php8.2-mysqlnd  //check version!!
 
 systemctl enable --now httpd2
+
+Создание самоподписанного сертификата
+```bash
+openssl.exe req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout /crt/nextcloud-private.key -out /crt/nextcloud-certificate.crt
+```
