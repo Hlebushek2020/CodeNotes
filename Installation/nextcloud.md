@@ -25,8 +25,11 @@ grant all privileges on nextcloud.* to nextcloud@localhost;
 
 reboot now
 
+Установка nextcloud. Посмотреть на первом шаге **ВЕРСИЮ** устанавливаемых php зависимостей, поменять версию во второй команде!
+```bash
 apt-get install nextcloud nextcloud-apache2
-apt-get install php8.2-pdo_mysql php8.2-mysqlnd  //check version!!
+apt-get install php8.2-pdo_mysql php8.2-mysqlnd
+```
 
 systemctl enable --now httpd2
 
