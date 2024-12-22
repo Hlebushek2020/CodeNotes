@@ -37,11 +37,11 @@ ask_parameters() {
     exit 1
   fi
 
-  echo "What insecure external port do you want to use? (Usually port 80. Redirects http to https traffic.)"
-  read -r -p "PSONO_EXTERNAL_PORT [default: $PSONO_EXTERNAL_PORT]: " PSONO_EXTERNAL_PORT_NEW
-  if [ "$PSONO_EXTERNAL_PORT_NEW" != "" ]; then
-    export PSONO_EXTERNAL_PORT=$PSONO_EXTERNAL_PORT_NEW
-  fi
+  #echo "What insecure external port do you want to use? (Usually port 80. Redirects http to https traffic.)"
+  #read -r -p "PSONO_EXTERNAL_PORT [default: $PSONO_EXTERNAL_PORT]: " PSONO_EXTERNAL_PORT_NEW
+  #if [ "$PSONO_EXTERNAL_PORT_NEW" != "" ]; then
+  #  export PSONO_EXTERNAL_PORT=$PSONO_EXTERNAL_PORT_NEW
+  #fi
 
   echo "What secure external port do you want to use? (Usually port 443. The actual port serving all the traffic with https.)"
   read -r -p "PSONO_EXTERNAL_PORT_SECURE [default: $PSONO_EXTERNAL_PORT_SECURE]: " PSONO_EXTERNAL_PORT_SECURE_NEW
@@ -272,7 +272,7 @@ services:
     restart: always
     image: nginx:alpine
     ports:
-      - "${PSONO_EXTERNAL_PORT}:80"
+      #- "${PSONO_EXTERNAL_PORT}:80"
       - "${PSONO_EXTERNAL_PORT_SECURE}:443"
     depends_on:
       - psono-combo
@@ -350,7 +350,7 @@ services:
     restart: always
     image: nginx:alpine
     ports:
-      - "${PSONO_EXTERNAL_PORT}:80"
+      #- "${PSONO_EXTERNAL_PORT}:80"
       - "${PSONO_EXTERNAL_PORT_SECURE}:443"
     depends_on:
       - psono-combo
